@@ -22,6 +22,18 @@ export default function HomeScreen() {
         <Text className="text-[#2A2B4B] text-3xl font-semibold">Travel</Text>
       </View>
       {/* Second section */}
+      <View className="px-6 mt-8 space-y-3">
+        <Text className="text-[#3C6072] text-[42px]">Enjoy the trip with</Text>
+        <Text className="text-[#00BCC9] text-[38px] font-bold">
+          Good Moments
+        </Text>
+        <Text className="text-[#3C6072] text-base">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the
+        </Text>
+      </View>
+      {/* third section images/circles */}
+      <View></View>
     </SafeAreaView>
   );
 }
