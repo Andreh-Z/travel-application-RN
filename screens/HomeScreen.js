@@ -1,6 +1,7 @@
-import { View, Text, SafeAreaView } from "react-native";
+import { View, Text, SafeAreaView, Image } from "react-native";
 import React, { useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
+import { HeroImage } from "../assets";
 
 export default function HomeScreen() {
   const navigation = useNavigation();
@@ -29,11 +30,19 @@ export default function HomeScreen() {
         </Text>
         <Text className="text-[#3C6072] text-base">
           Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the
+          industry.
         </Text>
       </View>
       {/* third section images/circles */}
-      <View></View>
+      <View className="w-[350px] h-[350px] bg-[#00BCC9] rounded-full absolute bottom-36 -right-36"></View>
+      <View className="w-[350px] h-[350px] bg-[#E99265] rounded-full absolute -bottom-28 -left-36"></View>
+      {/* Main image container */}
+      <View className="flex-1 relative items-center justify-center">
+        <Image
+          source={HeroImage}
+          className="w-full h-full mt-20 object-cover"
+        />
+      </View>
     </SafeAreaView>
   );
 }
