@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { default as HeroImage } from \"./hero.png\";","map":{"version":3,"names":["default","HeroImage"],"sources":["D:/Proyecto/native-travel/assets/index.js"],"sourcesContent":["export { default as HeroImage } from \"./hero.png\";\r\n"],"mappings":"AAAA,SAASA,OAAO,IAAIC,SAAS"},"metadata":{},"sourceType":"module"}
