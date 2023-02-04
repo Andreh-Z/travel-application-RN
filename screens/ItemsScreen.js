@@ -12,14 +12,14 @@ import { FontAwesome } from "@expo/vector-icons";
 
 export default function ItemsScreen({ route }) {
   const navigate = useNavigation();
-  const { imageSrc, title } = route.params;
+  const { imageSrc, title, address } = route.params;
 
   useLayoutEffect(() => {
     navigate.setOptions({
       headerShown: false,
     });
   }, []);
-
+  console.log({ location: address, title: title, imageUrl: imageSrc });
   return (
     <SafeAreaView className="flex-1 bg-white relative">
       <ScrollView className="flex-1 px-4 py-6">
@@ -47,13 +47,22 @@ export default function ItemsScreen({ route }) {
                 0 - 1,250
               </Text>
             </View>
-            <View className="px-2 py-1 rounded-md bg-teal-100">
+            <View className="px-2 py-2 rounded-md bg-teal-100">
               {title === "Example-One" ? (
                 <Text>Closed</Text>
               ) : (
                 <Text>Open</Text>
               )}
             </View>
+          </View>
+        </View>
+        <View className="mt-6">
+          <Text className="text-[#428288] text-[24px] font-bold">{title}</Text>
+          <View className="flex-row items-center space-x-2 mt-2">
+            <FontAwesome name="map-marker" size={25} color="#8C9EA6" />
+            <Text className="text-[#8C9EA6] text-[20px] font-bold">
+              {address}
+            </Text>
           </View>
         </View>
       </ScrollView>

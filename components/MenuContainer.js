@@ -1,7 +1,7 @@
 import { View, Text, TouchableOpacity, Image } from "react-native";
 import React from "react";
 
-export default function MenuContainer({ key, title, imageSc, type, setType }) {
+export default function MenuContainer({ title, imageSc, type, setType }) {
   const handlePress = () => {
     setType(title.toLowerCase());
   };

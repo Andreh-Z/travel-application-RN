@@ -110,6 +110,7 @@ export default function Discover() {
               }
               title="Example-One"
               location="Colombia"
+              address="255 Midway Road"
             />
             <ItemsContainer
               key={"102"}
@@ -118,6 +119,7 @@ export default function Discover() {
               }
               title="Example-Two"
               location="Argentina"
+              address="989 Buck Drive"
             />
             <ItemsContainer
               key={"103"}
@@ -134,6 +136,7 @@ export default function Discover() {
               }
               title="Example-Four"
               location="Italy"
+              address="2121 Coulter Lane"
             />
           </View>
         </View>

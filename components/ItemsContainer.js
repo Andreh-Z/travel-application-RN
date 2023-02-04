@@ -3,7 +3,7 @@ import React from "react";
 import { FontAwesome } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
-export default function ItemsContainer({ imageSrc, title, location }) {
+export default function ItemsContainer({ imageSrc, title, location, address }) {
   const navigation = useNavigation();
 
   return (
@@ -12,6 +12,7 @@ export default function ItemsContainer({ imageSrc, title, location }) {
         navigation.navigate("ItemsScreen", {
           imageSrc: imageSrc,
           title: title,
+          address: address,
         })
       }
       className="rounded-md border border-gray-300 space-y2 px-3 py-3 shadow-md bg-white w-[170px] my-2"
