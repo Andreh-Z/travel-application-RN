@@ -5,15 +5,36 @@ import {
   Image,
   ScrollView,
   TouchableOpacity,
+  TextInput,
+  Alert,
+  Button,
 } from "react-native";
 import React, { useLayoutEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { Attractions, Avatar, Hotel, Restaurant } from "../assets";
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
 import MenuContainer from "../components/MenuContainer";
+import { FontAwesome } from "@expo/vector-icons";
+import ItemsContainer from "../components/ItemsContainer";
 
 export default function Discover() {
   const [type, setType] = useState("restaurants");
+  const [text, setText] = useState();
+
+  const handlePress = () => {
+    Alert.alert(
+      "Problems here!",
+      "In order to use this service, you must pay Google Places.",
+      [
+        {
+          text: "Cancel",
+          onPress: () => console.log("Cancel Pressed"),
+          style: "cancel",
+        },
+        { text: "OK", onPress: () => console.log("OK") },
+      ]
+    );
+  };
 
   const navigation = useNavigation();
   useLayoutEffect(() => {
@@ -38,37 +59,31 @@ export default function Discover() {
       </View>
       {/* View for input search */}
       <View className="flex-row items-center bg-white mx-4 rounded-xl shadow-xl shadow-slate-700 py-1 px-4 mt-4">
-        <GooglePlacesAutocomplete
-          placeholder="Search"
-          onPress={(data, details = null) => {
-            // 'details' is provided when fetchDetails = true
-            console.log(data, details);
-          }}
-          query={{
-            key: "YOUR API KEY",
-            language: "en",
-          }}
+        <TextInput
+          value={text}
+          placeholder="You have to pay to use this 😔"
+          onPressIn={handlePress}
         />
       </View>
       {/* Menus containers */}
       <ScrollView>
         <View className="flex-row items-center justify-between px-8 mt-8">
           <MenuContainer
-            key={"hotel"}
+            key="hotel"
             title="Hotels"
             imageSc={Hotel}
             type={type}
             setType={setType}
           />
           <MenuContainer
-            key={"attractions"}
+            key="attractions"
             title="Attractions"
             imageSc={Attractions}
             type={type}
             setType={setType}
           />
           <MenuContainer
-            key={"restaurants"}
+            key="restaurants"
             title="Restaurants"
             imageSc={Restaurant}
             type={type}
@@ -76,11 +91,50 @@ export default function Discover() {
           />
         </View>
         <View>
-          <View>
-            <Text>Top tips</Text>
-            <TouchableOpacity>
-              <Text>Explore</Text>
+          <View className="flex-row items-center justify-between px-4 mt-8">
+            <Text className="text-[#2C7379] text-[28px] font-bold">
+              Top tips
+            </Text>
+            <TouchableOpacity className="flex-row items-center justify-center space-x-2">
+              <Text className="text-[#A0C4C7] text-[20px] font-bold">
+                Explore
+              </Text>
+              <FontAwesome name="long-arrow-right" size={24} color="#A0C4C7" />
             </TouchableOpacity>
+          </View>
+          <View className="px-4 mt-8 flex-row items-center justify-evenly flex-wrap">
+            <ItemsContainer
+              key={"101"}
+              imageSrc={
+                "https://cdn.pixabay.com/photo/2016/11/18/14/05/brick-wall-1834784_960_720.jpg"
+              }
+              title="Example-One"
+              location="Colombia"
+            />
+            <ItemsContainer
+              key={"102"}
+              imageSrc={
+                "https://cdn.pixabay.com/photo/2016/11/18/22/21/restaurant-1837150_960_720.jpg"
+              }
+              title="Example-Two"
+              location="Argentina"
+            />
+            <ItemsContainer
+              key={"103"}
+              imageSrc={
+                "https://cdn.pixabay.com/photo/2016/11/21/16/02/outdoor-dining-1846137_960_720.jpg"
+              }
+              title="Example-Three"
+              location="Uruguay"
+            />
+            <ItemsContainer
+              key={"104"}
+              imageSrc={
+                "https://cdn.pixabay.com/photo/2017/07/15/13/45/french-restaurant-2506490_960_720.jpg"
+              }
+              title="Example-Four"
+              location="Italy"
+            />
           </View>
         </View>
       </ScrollView>

@@ -13,7 +13,7 @@ import { HeroImage } from "../assets";
 export default function HomeScreen() {
   const navigation = useNavigation();
 
-  //   Remueve el header del tab quet ienen las pestañas
+  //   Remueve el header del tab que tienen las pestañas
   useLayoutEffect(() => {
     navigation.setOptions({
       headerShown: false,
