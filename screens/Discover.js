@@ -24,7 +24,7 @@ export default function Discover() {
   const handlePress = () => {
     Alert.alert(
       "Problems here!",
-      "In order to use this service, you must pay Google Places.",
+      "In order to use this service, you must pay Google Places. Test information",
       [
         {
           text: "Cancel",

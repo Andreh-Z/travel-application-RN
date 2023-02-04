@@ -1,10 +1,21 @@
 import { View, Text, TouchableOpacity, Image } from "react-native";
 import React from "react";
 import { FontAwesome } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 export default function ItemsContainer({ imageSrc, title, location }) {
+  const navigation = useNavigation();
+
   return (
-    <TouchableOpacity className="rounded-md border border-gray-300 space-y2 px-3 py-3 shadow-md bg-white w-[170px] my-2">
+    <TouchableOpacity
+      onPress={() =>
+        navigation.navigate("ItemsScreen", {
+          imageSrc: imageSrc,
+          title: title,
+        })
+      }
+      className="rounded-md border border-gray-300 space-y2 px-3 py-3 shadow-md bg-white w-[170px] my-2"
+    >
       <Image
         source={{ uri: imageSrc }}
         className="w-full h-40 rounded-md object-cover"
