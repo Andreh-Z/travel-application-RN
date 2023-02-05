@@ -80,10 +80,9 @@ export default function ItemsScreen({ route }) {
           </View>
         </View>
         <Text className="mt-4 tracking-wide text-[16px] font-semibold text-[#97a6af]">
-          Welcome to the wild and wacky world of our restaurant, where anything
-          can happen and the unexpected is always on the menu! Our chefs cook up
-          a storm of hilarious culinary creations, served up by a wait staff
-          that's as quirky as the food. Example Text ofc :)
+          Join us for a wild and wacky dining experience! Our chefs serve up
+          hilarious culinary creations and our quirky wait staff ensures a good
+          time. #FoodieFun #DoomieText
         </Text>
         <View className="flex-row gap-2 items-center justify-start flex-wrap mt-4">
           <TouchableOpacity className="px-2 py-1 rounded-md bg-emerald-100">
@@ -107,6 +106,34 @@ export default function ItemsScreen({ route }) {
           <TouchableOpacity className="px-2 py-1 rounded-md bg-emerald-100">
             <Text>#FeastfulFusion</Text>
           </TouchableOpacity>
+        </View>
+        <View className="space-y-2 mt-4 bg-gray-100 rounded-2xl mb-20 px-4 py-2">
+          <View className="items-center flex-row space-x-6">
+            <FontAwesome name="phone" size={24} color="#428288" />
+            {title === "Example-One" ? (
+              <Text className="text-lg">724-477-5739</Text>
+            ) : title === "Example-Two" ? (
+              <Text className="text-lg">909-881-2355</Text>
+            ) : (
+              <Text className="text-lg">703-291-9030</Text>
+            )}
+          </View>
+          <View className="items-center flex-row space-x-6">
+            <FontAwesome name="envelope" size={24} color="#428288" />
+            {title === "Example-One" ? (
+              <Text className="text-lg">wilton.smitham2@hotmail.com</Text>
+            ) : title === "Example-Two" ? (
+              <Text className="text-lg">hilario26@gmail.com</Text>
+            ) : title === "Example-Three" ? (
+              <Text className="text-lg">nia.abshire@hotmail.com</Text>
+            ) : (
+              <Text className="text-lg">angel_leannon57@gmail.com</Text>
+            )}
+          </View>
+          <View className="items-center flex-row space-x-6">
+            <FontAwesome name="map-pin" size={24} color="#428288" />
+            <Text className="text-lg">{address}</Text>
+          </View>
         </View>
       </ScrollView>
     </SafeAreaView>

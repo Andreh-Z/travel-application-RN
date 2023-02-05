@@ -128,6 +128,7 @@ export default function Discover() {
               }
               title="Example-Three"
               location="Uruguay"
+              address="100 Duff Avenue"
             />
             <ItemsContainer
               key={"104"}
