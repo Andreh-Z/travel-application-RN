@@ -79,6 +79,35 @@ export default function ItemsScreen({ route }) {
             </View>
           </View>
         </View>
+        <Text className="mt-4 tracking-wide text-[16px] font-semibold text-[#97a6af]">
+          Welcome to the wild and wacky world of our restaurant, where anything
+          can happen and the unexpected is always on the menu! Our chefs cook up
+          a storm of hilarious culinary creations, served up by a wait staff
+          that's as quirky as the food. Example Text ofc :)
+        </Text>
+        <View className="flex-row gap-2 items-center justify-start flex-wrap mt-4">
+          <TouchableOpacity className="px-2 py-1 rounded-md bg-emerald-100">
+            <Text>FoodieParadise</Text>
+          </TouchableOpacity>
+          <TouchableOpacity className="px-2 py-1 rounded-md bg-emerald-100">
+            <Text>#FoodieParadise</Text>
+          </TouchableOpacity>
+          <TouchableOpacity className="px-2 py-1 rounded-md bg-emerald-100">
+            <Text>#EateryEscape</Text>
+          </TouchableOpacity>
+          <TouchableOpacity className="px-2 py-1 rounded-md bg-emerald-100">
+            <Text>#DineAndDelight</Text>
+          </TouchableOpacity>
+          <TouchableOpacity className="px-2 py-1 rounded-md bg-emerald-100">
+            <Text>#GastroGoals</Text>
+          </TouchableOpacity>
+          <TouchableOpacity className="px-2 py-1 rounded-md bg-emerald-100">
+            <Text>#BiteIntoBliss</Text>
+          </TouchableOpacity>
+          <TouchableOpacity className="px-2 py-1 rounded-md bg-emerald-100">
+            <Text>#FeastfulFusion</Text>
+          </TouchableOpacity>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
