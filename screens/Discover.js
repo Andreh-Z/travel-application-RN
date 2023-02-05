@@ -1,7 +1,6 @@
 import {
   View,
   Text,
-  SafeAreaView,
   Image,
   ScrollView,
   TouchableOpacity,
@@ -9,6 +8,7 @@ import {
   Alert,
   Button,
 } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import React, { useLayoutEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { Attractions, Avatar, Hotel, Restaurant } from "../assets";

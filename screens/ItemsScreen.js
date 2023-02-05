@@ -1,14 +1,8 @@
-import {
-  View,
-  Text,
-  SafeAreaView,
-  ScrollView,
-  Image,
-  TouchableOpacity,
-} from "react-native";
+import { View, Text, ScrollView, Image, TouchableOpacity } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import React, { useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
-import { FontAwesome } from "@expo/vector-icons";
+import { FontAwesome, MaterialIcons } from "@expo/vector-icons";
 
 export default function ItemsScreen({ route }) {
   const navigate = useNavigation();
@@ -63,6 +57,26 @@ export default function ItemsScreen({ route }) {
             <Text className="text-[#8C9EA6] text-[20px] font-bold">
               {address}
             </Text>
+          </View>
+        </View>
+        <View className="mt-4 flex-row items-center justify-between">
+          <View className="flex-row items-center space-x-2">
+            <View className="w-12 h-12 rounded-2xl bg-red-100 items-center justify-center shadow-md">
+              <FontAwesome size={24} name="star" color="#D58574" />
+            </View>
+            <View>
+              <Text className="text-[#515151]">5.0</Text>
+              <Text className="text-[#515151]">Doomie Rating</Text>
+            </View>
+          </View>
+          <View className="flex-row items-center space-x-2">
+            <View className="w-12 h-12 rounded-2xl bg-red-100 items-center justify-center shadow-md">
+              <MaterialIcons size={24} name="attach-money" color="black" />
+            </View>
+            <View>
+              <Text className="text-[#515151]">$$$$</Text>
+              <Text className="text-[#515151]">Doomie Price</Text>
+            </View>
           </View>
         </View>
       </ScrollView>
