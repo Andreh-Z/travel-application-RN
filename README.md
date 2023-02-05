@@ -22,5 +22,5 @@ Travel-Helper is a great tool for anyone planning a trip. Whether you're searchi
 Here are some screenshots of the app, showcasing its user-friendly interface and modern design.
 
 <a href="https://postimg.cc/QBn0msRK" target="_blank"><img src="https://i.postimg.cc/76qdxZ99/img1.jpg"  height="40%" width="40%" alt="img1"/></a><br/><br/>
-<a href="https://postimg.cc/FdMGtpF9" target="_blank"><img src="https://i.postimg.cc/fyLP9q60/img2.jpg" alt="img2"/></a><br/><br/>
-<a href="https://postimg.cc/R66GbyBs" target="_blank"><img src="https://i.postimg.cc/63zSTx1X/img3.jpg" alt="img3"/></a><br/><br/>
+<a href="https://postimg.cc/FdMGtpF9" target="_blank"><img src="https://i.postimg.cc/fyLP9q60/img2.jpg" height="40%" width="40%" alt="img2"/></a><br/><br/>
+<a href="https://postimg.cc/R66GbyBs" target="_blank"><img src="https://i.postimg.cc/63zSTx1X/img3.jpg" height="40%" width="40%" alt="img3"/></a><br/><br/>
